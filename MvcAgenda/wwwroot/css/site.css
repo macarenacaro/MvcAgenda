@@ -9,10 +9,58 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: rgb(243,242,247);
+    color: rgb(27,24,40);
+}
+a {
+    color:rgb(106,94,158);
+}
+
+a:hover{
+ color: rgb(208,41,153);
+}
+
+
+nav {
+    background-color: rgb(221,216,232);
+}
+
+
+.w3rcontainer {
+    border: 1px solid #cccfdb;
+    border-radius: 2px;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: rgb(208,41,153);
+}
+
+    .hover-underline-animation:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(208,41,153);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+.navbar-brand {font-weight:500
 }
