@@ -6,7 +6,7 @@ namespace MvcAgenda.Data
     public class MvcAgendaContexto : DbContext
     {
         public MvcAgendaContexto(DbContextOptions<MvcAgendaContexto> options)
-        : base(options)
+: base(options)
         {
         }
         public DbSet<Departamento>? Departamentos { get; set; }
@@ -19,6 +19,7 @@ namespace MvcAgenda.Data
             foreach (var relationship in
             modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
             {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
         }
     }
